@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>24H管理后台</title>
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/inspinia/animate.css" rel="stylesheet">
+    <link href="css/inspinia/style.css" rel="stylesheet">
+    <link href="css/custom/customcss.css" rel="stylesheet">
+    <link href="css/jquery/dataTables/datatables.min.css" rel="stylesheet">
+    <link href="css/jquery/toastr/toastr.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <script src="js/jquery-3.4.1.min.js" type="application/javascript"></script>
+    <script src="js/index.js" type="application/javascript"></script>
+    <script src="js/carcloud.js" type="application/javascript"></script>
+</head>
+<style>
+    .img1 {
+        width: 5rem;
+    }
+</style>
+
+<body>
+<div id="wrapper">
+    <div th:insert="~{navigation :: left}"></div>
+    <div id="page-wrapper" class="gray-bg ibox-content">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li style="padding: 20px">
+                        <span class="m-r-sm text-muted welcome-message">24H欢迎您</span>
+                    </li>
+                    <li>
+                        <a href="/logout">
+                            <i class="fa fa-sign-out"></i> 注销
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>欢迎</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item" ng-repeat="breadcrumb in breadcrumbs">
+                        <a>欢迎来到24H服务后台</a>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-2">
+            </div>
+        </div>
+        <div ui-view class="wrapper wrapper-content animated fadeInRight">
+            <div class="row " style="display: flex;justify-content: center;justify-items: center;">
+                <div class="col-lg-4" style="padding: 15rem 0"><img class="img-fluid" src="imgs/index/24h_logo.png" style=" display:block;margin: 0 auto;"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                24H 汽车服务版权所有 Copyright &copy; 2019
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

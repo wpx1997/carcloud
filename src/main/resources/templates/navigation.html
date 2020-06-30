@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/index.js" type="application/javascript"></script>
+    <script src="js/jquery-3.4.1.min.js" type="application/javascript"></script>
+</head>
+<body>
+<div th:fragment="left">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown" style="margin-bottom: 12px">
+                        <img id="userAvatar" class="img-circle img1" th:src="'/picture/avatar/' + ${session.user.avatarUrl}" />
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span th:text="${session.user.name}" class="block m-t-xs font-bold"></span>
+                            <span th:text="${session.user.position}" class="text-muted text-xs"></span>
+                        </a>
+                    </div>
+                    <div class="leftMiddle">
+                        <div class="leftMenu">
+                            <div class="menuList">
+                                <ul>
+                                    <li class="">
+                                        <p class="fuMenu">权限维护</p>
+                                        <img class="option" src="/picture/left/drop-down.png" style="transform: rotate(360deg);">
+                                        <div class="liMenu" style="">
+                                            <a href="/zero/dept/0"><p class="pMenu" name="emp">角色管理</p></a>
+                                            <a href="/zero/dept/0"><p class="pMenu" name="emp">账号管理</p></a>
+                                        </div>
+                                        <p class="fuMenu">商家类型维护</p>
+                                        <img class="option" src="/picture/left/drop-down.png" style="transform: rotate(360deg);">
+                                        <div class="liMenu" style="">
+                                            <a href="/zero/dept/0"><p class="pMenu" name="emp">商家类型管理</p></a>
+                                        </div>
+                                        <p class="fuMenu">商家维护</p>
+                                        <img class="option" src="/picture/left/drop-down.png" style="transform: rotate(360deg);">
+                                        <div class="liMenu" style="">
+                                            <a href="/zero/dept/0"><p class="pMenu" name="emp">商家管理</p></a>
+                                        </div>
+                                        <p class="fuMenu">轮播图维护</p>
+                                        <img class="option" src="/picture/left/drop-down.png" style="transform: rotate(360deg);">
+                                        <div class="liMenu" style="">
+                                            <a href="/zero/dept/0"><p class="pMenu" name="emp">轮播图管理</p></a>
+                                        </div>
+                                        <p class="fuMenu">资讯维护</p>
+                                        <img class="option" src="/picture/left/drop-down.png" style="transform: rotate(360deg);">
+                                        <div class="liMenu" style="">
+                                            <a href="/zero/dept/0"><p class="pMenu" name="emp">资讯管理</p></a>
+                                        </div>
+                                        <p class="fuMenu">运营维护</p>
+                                        <img class="option" src="/picture/left/drop-down.png" style="transform: rotate(360deg);">
+                                        <div class="liMenu" style="">
+                                            <a href="/zero/dept/0"><p class="pMenu" name="emp">运营管理</p></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+</body>

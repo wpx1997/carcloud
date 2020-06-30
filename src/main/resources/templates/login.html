@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>24H管理后台登录</title>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/jquery/toastr/toastr.min.css" rel="stylesheet">
+    <link href="css/inspinia/animate.css" rel="stylesheet">
+    <link href="css/inspinia/style.css" rel="stylesheet">
+    <script src="js/login.js" type="application/javascript"></script>
+    <script src="js/jquery-3.4.1.min.js" type="application/javascript"></script>
+    <script src="js/carcloud.js" type="application/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+</head>
+<body class="gray-bg ibox-content">
+<div class="loginColumns animated fadeInDown container-fluid">
+    <div class="loginColumns animated fadeInDown container-fluid">
+        <div class="row" style="padding-top: 2rem">
+            <div class="col-md-4 col-sm-4 col-xs-4"></div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><img src="imgs/index/24h_logo.png" width="100" height="100" style="display: block; margin: 0 auto;"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-4"></div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <div>
+                    <div id="loginForm" class="m-t" role="form">
+                        <div class="form-group" style="padding:0.5rem 0 1rem 0;">
+                            <h2 class="text-center" style="font-weight: 600">24H服务管理系统</h2>
+                        </div>
+                        <div class="form-group">
+                            <input id="loginName" type="text" name="name" class="form-control" placeholder="用户名" autocomplete="off" minlength="4" maxlength="20">
+                        </div>
+                        <div class="form-group">
+                            <input id="password" type="password" name="password" class="form-control" placeholder="密码">
+                        </div>
+                        <button type="button" class="btn btn-primary block full-width m-b" onclick="loginVerify()">登录</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
